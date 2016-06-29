@@ -80,3 +80,73 @@ $(".previous").click(function(){
 $(".submit").click(function(){
 	return false;
 })
+
+var signature = document.createElement("div");
+var compname = document.createElement("strong");
+var title = document.createElement("p");
+var branch = document.createElement("p");
+
+compname.innerHTML = "Versacor Enterprises, LLC";
+signature.setAttribute('style','font-family: calibri;');
+signature.setAttribute('align','left');
+
+function hello(){
+	var name = document.createElement("strong");
+	var phone = document.createElement("p");
+	var pline;
+	name.innerHTML = document.getElementsByName("email")[0].value;
+	title.innerHTML = document.getElementsByName("title")[0].value;
+
+	var temp = document.getElementsByName("branch")[0].value;
+
+	if(temp == "Home Office"){ //could have been a switch case I know
+		branch.innerHTML = "485 Cherry Lane | Southlake, TX 76092";
+		pline = "T: 817-310-3525 | ";
+		var cellnum =document.getElementById("cellbox");
+		if(title.innerHTML == "Service Manager" || title.innerHTML == "Service Specialist" ){
+			cellnum.setAttribute('style','display:none;');
+		}
+		else{
+			cellnum.setAttribute('style','display:block;');
+		}
+	}
+	else if(temp == "Dallas"){
+		branch.innerHTML = "485 Cherry Lane | Southlake, TX 76092";
+		pline = "T: 817-310-3525 | ";
+	}
+	else if(temp == "Fort Worth"){
+		branch.innerHTML = "485 Cherry Lane | Southlake, TX 76092";
+		pline = "T: 817-310-3525 | ";
+	}
+	else if(temp == "San Antonio"){
+		branch.innerHTML = "2437 Boardwalk Street | San Antonio, TX 78217";
+		pline = "T: 210-305-1258 | ";
+	}
+	else if(temp == "Wichita Falls"){
+		branch.innerHTML = "485 Cherry Lane | Southlake, TX 76092";
+		pline = "T: 940-696-8222 | ";
+	}
+	else if(temp == "Houston"){
+		branch.innerHTML = "5635 NW Central Drive, Ste E-106 | Houston TX 77092";
+		pline = "T: 832-247-7670 | ";
+	}
+
+
+	console.log(name);
+	console.log(title);
+	console.log(branch);
+
+	signature.appendChild(name);
+	signature.appendChild(title);
+	signature.appendChild(compname);
+	signature.appendChild(branch);
+	document.getElementById("sig under").appendChild(signature);
+
+
+}
+
+
+
+
+
+

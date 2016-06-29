@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Multi Step Form with Progress Bar using jQuery and CSS3</title>
+    
+    
+    <link rel="stylesheet" href="css/reset.css">
+
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <!-- multistep form -->
+<form id="msform">
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active">Name, Title, and Branch</li>
+    <li>Phone Numbers</li>
+    <li>Your Personal Signature</li>
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Enter your name, select your title and branch</h2>
+    <h3 class="fs-subtitle">This is step 1</h3>
+    <input type="text" name="email" placeholder="Name" />
+    <select type="text" name="title" placeholder="Password">
+      <option value="President">President</option>
+      <option value="Founder & Director">Founder & Director</option>
+      <option value="Controller">Controller</option>
+      <option value="Regional Account Executive">Regional Account Executive</option>
+      <option value="Total Quality Manager">Total Quality Manager</option>
+      <option value="HR Manager">HR Manager</option>
+      <option value="Branch Administrator">Branch Administrator</option>
+      <option value="I.T. Specialist">I.T. Specialist</option>
+      <option value="Account Executive">Account Executive</option>
+      <option value="General Manager">General Manager</option>
+      <option value="Service Manager">Service Manager</option>
+      <option value="Service Specialist">Service Specialist</option>
+      <option value="Branch Manager">Branch Manager</option>
+    </select>
+    <!--<input type="password" name="cpass" placeholder="Confirm Password" />-->
+    <select type="text" name="branch">
+      <option value="Home Office">Home Office</option>
+      <option value="Dallas">Dallas</option>
+      <option value="Fort Worth">Fort Worth</option>
+      <option value="Wichita Falls">Wichita Falls</option>
+      <option value="Houston">Houston</option>
+      <option value="San Antonio">San Antonio</option>
+    </select>
+    <input type="button" name="next" class="next action-button" value="Next" onclick="hello();" />
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Social Profiles</h2>
+    <h3 class="fs-subtitle">Your presence on the social network</h3>
+    <input type="text" name="twitter" placeholder="Twitter" />
+    <input type="text" name="facebook" placeholder="Facebook" />
+    <input id="cellbox" type="text" name="gplus" placeholder="Google Plus" />
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset id="sig under">
+    <h2 class="fs-title">Here's your personalized signature</h2>
+    <h3 class="fs-subtitle"> </h3>
+    <!--<input type="text" name="fname" placeholder="First Name" />
+    <input type="text" name="lname" placeholder="Last Name" />
+    <input type="text" name="phone" placeholder="Phone" />
+    <textarea name="address" placeholder="Address"></textarea>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="submit" name="submit" class="submit action-button" value="Submit" />-->
+  </fieldset>
+</form>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
