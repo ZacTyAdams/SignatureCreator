@@ -99,16 +99,24 @@ function hello(){
 
 	var temp = document.getElementsByName("branch")[0].value;
 
+	var cellnum =document.getElementById("cellbox");// currently trying to see if the hide excusion works outside of the if cluster
+	var prevbutton = document.getElementById("pbutton");
+	var prompt = document.getElementById("prompt");
+	if(title.innerHTML == "Service Manager" || title.innerHTML == "Service Specialist" ){
+		cellnum.setAttribute('style','display:none;');
+		pbutton.setAttribute('style','display:none;');
+		prompt.innerHTML = "Phone numbers auto-entered, click next";
+	}
+	else{
+		cellnum.setAttribute('style','display:block;');
+		pbutton.setAttribute('style','display:inline;');
+		prompt.innerHTML = "Please enter your cell number";
+	}
+
+
 	if(temp == "Home Office"){ //could have been a switch case I know
 		branch.innerHTML = "485 Cherry Lane | Southlake, TX 76092";
 		pline = "T: 817-310-3525 | ";
-		var cellnum =document.getElementById("cellbox");
-		if(title.innerHTML == "Service Manager" || title.innerHTML == "Service Specialist" ){
-			cellnum.setAttribute('style','display:none;');
-		}
-		else{
-			cellnum.setAttribute('style','display:block;');
-		}
 	}
 	else if(temp == "Dallas"){
 		branch.innerHTML = "485 Cherry Lane | Southlake, TX 76092";
